@@ -10,35 +10,72 @@
             color: #fff;
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 0;
             text-align: center;
         }
         header {
+            background-color: #000;
             border-bottom: 3px solid #e60000;
-            padding-bottom: 20px;
-            margin-bottom: 20px;
+            padding: 30px 20px;
         }
         h1 {
             color: #e60000;
+            margin: 0;
+            font-size: 2.2rem;
         }
-        .category {
-            background: #222;
-            margin: 10px auto;
-            padding: 15px;
-            max-width: 500px;
-            border-radius: 5px;
-            border-left: 5px solid #e60000;
+        .subtitle {
+            color: #ccc;
+            margin-top: 5px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 0 15px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 20px;
             text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-top: 4px solid #e60000;
         }
-        .btn {
-            display: inline-block;
+        .card h3 {
+            color: #fff;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .card p {
+            color: #bbb;
+            font-size: 0.95rem;
+            line-height: 1.4;
+            flex-grow: 1;
+        }
+        .btn-whatsapp {
+            display: block;
             background-color: #25d366;
             color: white;
-            padding: 12px 25px;
+            text-align: center;
+            padding: 10px;
             text-decoration: none;
             font-weight: bold;
             border-radius: 5px;
-            margin-top: 25px;
+            margin-top: 15px;
+            transition: background 0.3s;
+        }
+        .btn-whatsapp:hover {
+            background-color: #20ba5a;
+        }
+        footer {
+            margin: 40px 0 20px;
+            color: #777;
+            font-size: 0.85rem;
         }
     </style>
 </head>
@@ -46,36 +83,74 @@
 
     <header>
         <h1>SJ GRAVITY</h1>
-        <p>Tienda de MTB y Downhill - San Juan, Argentina</p>
+        <p class="subtitle">Tienda de MTB y Downhill — San Juan, Argentina</p>
     </header>
 
     <main>
-        <h2>Catálogo de Productos</h2>
-        
-        <div class="category">
-            <strong>Frenos y pastillas:</strong> Frenos hidráulicos, pastillas, discos y repuestos.
-        </div>
-        <div class="category">
-            <strong>Horquillas y amortiguadores:</strong> Componentes de suspensión para descenso.
-        </div>
-        <div class="category">
-            <strong>Transmisión:</strong> Cadenas, cambios, shifters y repuestos.
-        </div>
-        <div class="category">
-            <strong>Ruedas y cubiertas:</strong> Cubiertas, cámaras, mazas y aros.
-        </div>
-        <div class="category">
-            <strong>Pedales y puños:</strong> Accesorios de agarre y alto rendimiento.
-        </div>
-        <div class="category">
-            <strong>Cascos y protecciones:</strong> Equipamiento completo para DH.
-        </div>
+        <h2 style="color: #fff; margin-top: 30px;">Catálogo de Productos</h2>
+        <p style="color: #aaa; margin-bottom: 30px;">Hacé clic en el botón de consulta de cada producto para comunicarte por WhatsApp.</p>
 
-        <p style="margin-top: 30px; color: #ccc;">Consultá stock, precios, compatibilidad y envíos antes de cerrar tu pedido:</p>
-        
-        <!-- Cambia el número 5492640000000 por tu número real de WhatsApp con código de país y área -->
-        <a class="btn" href="https://wa.me/5492640000000?text=Hola,%20quiero%20consultar%20por%20un%20producto%20de%20SJ%20Gravity" target="_blank">Consultar por WhatsApp</a>
+        <div class="container">
+            <!-- Producto 1 -->
+            <div class="card">
+                <div>
+                    <h3>Frenos y Pastillas</h3>
+                    <p>Frenos hidráulicos de alta gama, pastillas de freno sintéticas/orgánicas, rotores/discos de freno y repuestos de competición para DH y MTB.</p>
+                </div>
+                <!-- REEMPLAZA 5492640000000 CON TU NÚMERO REAL -->
+                <a class="btn-whatsapp" href="https://wa.me/5492645778544?text=Hola,%20quiero%20consultar%20por%20Frenos%20y%20pastillas" target="_blank">Consultar por WhatsApp</a>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="card">
+                <div>
+                    <h3>Horquillas y Amortiguadores</h3>
+                    <p>Componentes de suspensión delantera y trasera, cartuchos, retenes y service para alto rendimiento en descenso.</p>
+                </div>
+                <a class="btn-whatsapp" href="https://wa.me/5492640000000?text=Hola,%20quiero%20consultar%20por%20Horquillas%20y%20amortiguadores" target="_blank">Consultar por WhatsApp</a>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="card">
+                <div>
+                    <h3>Transmisión</h3>
+                    <p>Cadenas reforzadas, cambios traseros, shifters, piñones y repuestos para máxima precisión en terrenos exigentes.</p>
+                </div>
+                <a class="btn-whatsapp" href="https://wa.me/5492640000000?text=Hola,%20quiero%20consultar%20por%20repuestos%20de%20Transmision" target="_blank">Consultar por WhatsApp</a>
+            </div>
+
+            <!-- Producto 4 -->
+            <div class="card">
+                <div>
+                    <h3>Ruedas y Cubiertas</h3>
+                    <p>Cubiertas especiales para descenso y enduro, cámaras reforzadas, mazas, aros y repuestos de maza.</p>
+                </div>
+                <a class="btn-whatsapp" href="https://wa.me/5492640000000?text=Hola,%20quiero%20consultar%20por%20Ruedas%20y%20cubiertas" target="_blank">Consultar por WhatsApp</a>
+            </div>
+
+            <!-- Producto 5 -->
+            <div class="card">
+                <div>
+                    <h3>Pedales y Puños</h3>
+                    <p>Pedales de plataforma abulonados de gran agarre y puños de silicona o lock-on para un control total de la bicicleta.</p>
+                </div>
+                <a class="btn-whatsapp" href="https://wa.me/5492640000000?text=Hola,%20quiero%20consultar%20por%20Pedales%20y%20punios" target="_blank">Consultar por WhatsApp</a>
+            </div>
+
+            <!-- Producto 6 -->
+            <div class="card">
+                <div>
+                    <h3>Cascos y Protecciones DH</h3>
+                    <p>Cascos integrales, antiparras, rodilleras, coderas y petos de protección para práctica extrema de Downhill.</p>
+                </div>
+                <a class="btn-whatsapp" href="https://wa.me/5492640000000?text=Hola,%20quiero%20consultar%20por%20Cascos%20y%20protecciones" target="_blank">Consultar por WhatsApp</a>
+            </div>
+        </div>
     </main>
+
+    <footer>
+        <p>SJ Gravity — San Juan, Argentina. Confirmá stock, precios y envíos antes de cerrar tu pedido.</p>
+    </footer>
 
 </body>
 </html>
